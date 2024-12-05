@@ -1,0 +1,47 @@
+<%- include('./partials/header')  %>
+<%- include('./partials/myNav')  %>
+
+<div class="container" >
+    <hr color="navy" size="10"/>
+    <h1 align="center">Edit Record Page</h1>
+    <hr color="navy" size="10"/>
+    <form method="post" action="/emp/updRecEmp" >
+        <table class="table table-bordered">            
+            <tbody>
+                <tr>
+                    <td>Emp Name </td>
+                    <td><input type="text" name="enm" value="<%= data.empName   %>"  /></td>
+                </tr>
+
+                <tr>
+                    <td>Emp Password </td>
+                    <td><input type="text" name="pwd" value="<%= data.empPassword %>"  /></td>
+                </tr>
+
+                <tr>
+                    <td>Email </td>
+                    <td><input type="email" name="mailId" value="<%= data.empMail   %>" /></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth </td>
+                    <td><input type="text" name="dob" value="<%= data.empDOB.toDateString()   %>" /></td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td><input type="number" name="esal" value="<%= data.empSalary %>" /></td>
+                </tr>
+                <tr>                    
+                    <td colspan="2" >
+                        <input type="hidden" name="uid" value="<%= data._id %>" />
+                        <input type="submit" name="updEmpBtn" value="Update Employee"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+
+
+</div>
+
+<%- include('./partials/footer')  %>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="aqua">
+    <hr color="navy" size="10"/>
+    <h1 align="center">My First Home Page</h1>
+    <hr color="navy" size="10"/>
+    
+    <h3>Welcome <%= nm %> </h3>
+    <h3>Age <%= a %> </h3>
+
+    <p>
+        Hobbies : <%= hobb[0] %> <br />
+        Hobbies : <%= hobb[1] %> <br />
+        Hobbies : <%= hobb[2] %> <br />
+    </p>
+    <p>
+        <h3>Hobbies</h3>
+        <ul>
+        <% hobb.forEach(( h )=>{ %>
+
+            <li><%= h %></li>
+
+         <% }) %>   
+        </ul>
+    </p>
+    
+    
+    <a href="/about" >AboutPage</a>
+    
+</body>
+</html>

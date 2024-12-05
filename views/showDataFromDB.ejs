@@ -1,0 +1,46 @@
+
+<%- include('./partials/header') %>
+<%- include('./partials/myNav') %>
+
+
+<hr color="navy" size="10"/>
+    <h1 align="center">Show Data Page</h1>
+    <hr color="navy" size="10"/>
+    <div class="container">
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>                    
+                    <th> Employee Name </th>
+                    <th> Password </th>                    
+                    <th> Email </th>
+                    <th> Salary </th>
+                    <th> Date of Birth </th>
+                    <th> Edit Record </th>
+                    <th> Delete Record </th>
+                </tr>
+            </thead>
+            <tbody> 
+
+                <% data.forEach((emp)=>{  %>
+                    <tr>
+                        
+                        <td><%= emp.empName %> </td>
+                        <td><%= emp.empPassword %></td>
+                        
+                        <td><%= emp.empMail %></td>
+                        <td><%= emp.empSalary %></td>
+                        <td><%= emp.empDOB.toDateString() %></td>
+                        
+                        <td><a href="/emp/edit/<%= emp._id %>">Edit</a></td>
+                        <td><a href="/emp/delRec/<%= emp._id %>">Delete</a></td>
+                    
+                    
+                    
+                    </tr>
+                 <% }) %> 
+            
+            </tbody>
+        </table>
+    </div>   
+
+<%- include('./partials/footer') %>
